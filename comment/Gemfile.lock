@@ -8,9 +8,9 @@ GEM
     mongo (2.4.3)
       bson (>= 4.2.1, < 5.0.0)
     mustermann (1.0.0)
+    prometheus-client (2.0.0)
     puma (3.10.0)
-    quantile (0.2.0)
-    rack (2.0.3)
+    rack (2.0.8)
     rack-protection (2.0.0)
       rack
     rufus-scheduler (3.4.2)
@@ -32,10 +32,10 @@ DEPENDENCIES
   bson_ext
   mongo
   prometheus-client
-  puma
-  sinatra
+  puma (= 3.10.0)
   rack
   rufus-scheduler
+  sinatra
 
 BUNDLED WITH
    1.15.3
