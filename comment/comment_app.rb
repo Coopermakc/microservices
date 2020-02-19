@@ -12,8 +12,9 @@ mongo_database = ENV['COMMENT_DATABASE'] || 'test'
 
 # Create and register metrics
 prometheus = Prometheus::Client.registry
-comment_health_gauge = Prometheus::Client::Gauge.new(:comment_health, 'Health status of Comment service')
-comment_health_db_gauge = Prometheus::Client::Gauge.new(:comment_health_mongo_availability, 'Check if MongoDB is available to Comment')
+
+comment_health_gauge = Prometheus::Client::Gauge.new(:comment_health, docstring: 'Health status of Comment service')
+comment_health_db_gauge = Prometheus::Client::Gauge.new(:comment_health_mongo_availability, docstring: 'Check if MongoDB is available to Comment')
 prometheus.register(comment_health_gauge)
 prometheus.register(comment_health_db_gauge)
 

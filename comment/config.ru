@@ -1,5 +1,4 @@
 require './comment_app'
-
 require 'rack'
 require 'prometheus/middleware/collector'
 require 'prometheus/middleware/exporter'
